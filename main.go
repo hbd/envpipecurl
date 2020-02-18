@@ -13,6 +13,7 @@ func main() {
 		if err != nil {
 			log.Printf("%s\n", err)
 		}
+		req.Body.Close()
 		fmt.Printf("%s\n", string(bodybytes))
 	})); err != nil {
 		log.Fatal(err)
