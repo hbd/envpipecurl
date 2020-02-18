@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	if err := http.ListenAndServe("localhost:8080", http.HandlerFunc(func(w http.ResponseWriter, req *http.Request) {
+	if err := http.ListenAndServe(":8080", http.HandlerFunc(func(w http.ResponseWriter, req *http.Request) {
 		bodybytes, err := ioutil.ReadAll(req.Body)
 		if err != nil {
 			log.Printf("%s\n", err)
